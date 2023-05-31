@@ -3,20 +3,51 @@
 	"name": "Maxima",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#operators"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#double-quoted-strings"
+		},
+		{
+			"include": "#single-quoted-strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
+		"comments": {
+			"name": "comment.block.mac",
+			"begin": "/\\*",
+			"end": "\\*/"
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.mac",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|then|else|while|do|return|lambda|block|quote|load)\\b"
 			}]
 		},
-		"strings": {
+		"operators": {
+			"name": "keyword.operator.mac",
+			"match": "\\b(\\+|-|\\*|/|\\^|%|=|<|>|<=|>=|/=|and|or|not)\\b"
+		},
+		"functions": {
+			"name": "constant.language.mac",
+			"match": "\\b(sin|cos|tan|abs|exp|log|sqrt|rem|mod|display)\\b"
+		},
+		"double-quoted-strings": {
 			"name": "string.quoted.double.mac",
 			"begin": "\"",
 			"end": "\"",
@@ -26,7 +57,26 @@
 					"match": "\\\\."
 				}
 			]
-		}
+		},
+		"single-quoted-strings": {
+			"name": "string.quoted.single.mac",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.mac",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"name": "constant.numeric.mac",
+			"match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+	   },
+	   "variables": {
+		   "name": "variable.mac",
+		   "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b"
+	   }
 	},
 	"scopeName": "source.mac"
 }
