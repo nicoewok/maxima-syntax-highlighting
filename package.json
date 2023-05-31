@@ -1,0 +1,25 @@
+{
+  "name": "maxima-syntax-highlighting",
+  "displayName": "Maxima Syntax Highlighting",
+  "description": "A syntax highlighter for Maxima, the Common Lisp maths language. More about Maxima here: maxima.sourceforge.io",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mac",
+      "aliases": ["Maxima", "mac"],
+      "extensions": [".mac"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mac",
+      "scopeName": "source.mac",
+      "path": "./syntaxes/mac.tmLanguage.json"
+    }]
+  }
+}
