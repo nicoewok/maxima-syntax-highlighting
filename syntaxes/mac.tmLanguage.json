@@ -25,6 +25,9 @@
 		},
 		{
 			"include": "#variables"
+		},
+		{
+			"include": "#constants"
 		}
 	],
 	"repository": {
@@ -36,16 +39,21 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.mac",
-				"match": "\\b(if|then|else|while|do|return|lambda|block|quote|load)\\b"
+				"match": "\\b(if|then|else|while|do|for|to|return|lambda|block|quote|load)\\b"
 			}]
 		},
 		"operators": {
 			"name": "keyword.operator.mac",
-			"match": "\\b(\\+|-|\\*|/|\\^|%|=|<|>|<=|>=|/=|and|or|not)\\b"
+			"match": "\\b\\s*(\\+|-|\\*|/|\\^|%|:|:=|=|#|<|>|<=|>=|/=|and|or|not)\\s*\\b"
 		},
 		"functions": {
-			"name": "constant.language.mac",
-			"match": "\\b(sin|cos|tan|abs|exp|log|sqrt|rem|mod|display)\\b"
+			"name": "entity.name.function.mac",
+			"match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b(?=\\s*\\()",
+			"captures": {
+				"0": {
+					"name": "entity.name.function.mac"
+				}
+			}
 		},
 		"double-quoted-strings": {
 			"name": "string.quoted.double.mac",
@@ -76,7 +84,11 @@
 	   "variables": {
 		   "name": "variable.mac",
 		   "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b"
-	   }
+	   },
+	   "constants": {
+		"name": "constant.language.mac",
+		"match": "\\b(%pi|%e|%inf|%i|%phi)\\b"
+		}
 	},
 	"scopeName": "source.mac"
 }
