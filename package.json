@@ -4,8 +4,8 @@
   "homepage": "https://github.com/nicoewok/maxima-syntax-highlighting",
   "displayName": "Maxima Syntax Highlighting",
   "description": "A syntax highlighter for Maxima, the Common Lisp maths language. More about Maxima here: https://maxima.sourceforge.io/",
-  "version": "1.0.0",
-  "icon": "https://github.com/nicoewok/maxima-syntax-highlighting/blob/main/images/icon_market.png",
+  "version": "1.0.1",
+  "icon": "images/icon_market.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/nicoewok/maxima-syntax-highlighting.git"
