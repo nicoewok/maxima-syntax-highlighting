@@ -1,65 +1,19 @@
 # maxima-syntax-highlighting README
 
-This is the README for your extension "maxima-syntax-highlighting". After writing up a brief description, we recommend including the following sections.
+You finally have language support for Maxima (.mac)! With this extension, your Maxima code becomes more visually appealing and readable, with different elements such as keywords, operators, functions, strings, numbers, variables, and comments highlighted in distinct colors. Additionally comes with an icon for
+.mac files.
+The extension provides an intuitive and customizable syntax highlighting experience, making it easier to spot errors, navigate code, and improve overall readability. Elevate your Maxima coding experience with this comprehensive syntax highlighting extension for Visual Studio Code.
 
-## Features
+Read more about Maxima here: https://maxima.sourceforge.io/
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+If you want to contribute to this (adding new keywords, change pattern recognision, etc.) here is the repository: https://github.com/nicoewok/maxima-syntax-highlighting
+Every contribution is very welcome to help improve recognising everything Maxima has to offer!
 
-For example if there is an image subfolder under your extension project workspace:
+![Screenshot to showcase capabilities](images/Screenshot.png)
+Used theme: Atom One Dark Theme
 
-\!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
 
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release of the Extension.

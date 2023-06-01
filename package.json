@@ -1,8 +1,9 @@
 {
   "name": "maxima-syntax-highlighting",
+  "publisher": "NicoLang1604",
   "displayName": "Maxima Syntax Highlighting",
-  "description": "A syntax highlighter for Maxima, the Common Lisp maths language. More about Maxima here: maxima.sourceforge.io",
-  "version": "0.0.1",
+  "description": "A syntax highlighter for Maxima, the Common Lisp maths language. More about Maxima here: https://maxima.sourceforge.io/",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.78.0"
   },
