@@ -11,7 +11,7 @@ Every contribution is very welcome to help improve recognising everything Maxima
 
 
 
-![Screenshot to showcase capabilities](./images/Screenshot.png)
+![Screenshot to showcase capabilities](https://github.com/nicoewok/maxima-syntax-highlighting/blob/main/images/Screenshot.png)
 Used theme: Atom One Dark Theme
 
 
