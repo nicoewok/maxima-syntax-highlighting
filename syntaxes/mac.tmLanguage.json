@@ -18,9 +18,6 @@
 			"include": "#double-quoted-strings"
 		},
 		{
-			"include": "#single-quoted-strings"
-		},
-		{
 			"include": "#numbers"
 		},
 		{
@@ -59,17 +56,6 @@
 			"name": "string.quoted.double.mac",
 			"begin": "\"",
 			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.mac",
-					"match": "\\\\."
-				}
-			]
-		},
-		"single-quoted-strings": {
-			"name": "string.quoted.single.mac",
-			"begin": "'",
-			"end": "'",
 			"patterns": [
 				{
 					"name": "constant.character.escape.mac",
