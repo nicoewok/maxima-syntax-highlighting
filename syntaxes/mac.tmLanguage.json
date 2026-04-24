@@ -1,80 +1,94 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Maxima",
-	"patterns": [
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#operators"
-		},
-		{
-			"include": "#functions"
-		},
-		{
-			"include": "#double-quoted-strings"
-		},
-		{
-			"include": "#numbers"
-		},
-		{
-			"include": "#variables"
-		},
-		{
-			"include": "#constants"
-		}
-	],
-	"repository": {
-		"comments": {
-			"name": "comment.block.mac",
-			"begin": "/\\*",
-			"end": "\\*/"
-		},
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.mac",
-				"match": "\\b(if|then|else|elseif|while|do|for|to|return|lambda|block|quote|load|unless|From|Thru|Step|Next|in)\\b"
-			}]
-		},
-		"operators": {
-			"name": "keyword.operator.mac",
-			"match": "\\b\\s*(\\+|-|\\*|/|\\^|%|:|:=|=|#|<|>|<=|>=|/=|and|or|not)\\s*\\b"
-		},
-		"functions": {
-			"name": "entity.name.function.mac",
-			"match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b(?=\\s*\\()",
-			"captures": {
-				"0": {
-					"name": "entity.name.function.mac"
-				}
-			}
-		},
-		"double-quoted-strings": {
-			"name": "string.quoted.double.mac",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.mac",
-					"match": "\\\\."
-				}
-			]
-		},
-		"numbers": {
-			"name": "constant.numeric.mac",
-			"match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
-	   },
-	   "variables": {
-		   "name": "variable.mac",
-		   "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b"
-	   },
-	   "constants": {
-		"name": "constant.language.mac",
-		"match": "\\b(%pi|%e|%inf|%i|%phi)\\b"
-		}
-	},
-	"scopeName": "source.mac"
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Maxima",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#built_in_functions"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#double-quoted-strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#built_in_variables"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "name": "comment.block.mac",
+            "begin": "/\\*",
+            "end": "\\*/"
+        },
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.mac",
+                "match": "\\b(if|then|else|elseif|while|do|for|to|return|block|quote|load|unless|From|Thru|Step|Next|in)\\b"
+            }]
+        },
+        "built_in_functions": {
+            "name": "support.function.mac",
+            "match": "\\b(plist|listp|lambda)\\b(?=\\s*\\()"
+        },
+        "operators": {
+            "name": "keyword.operator.mac",
+            "match": "(?:\\+|-|\\*|/|\\^|%|:|:=|=|#|<|>|<=|>=|/=)|\\b(and|or|not)\\b"
+        },
+        "functions": {
+            "name": "entity.name.function.mac",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b(?=\\s*\\()",
+            "captures": {
+                "0": {
+                    "name": "entity.name.function.mac"
+                }
+            }
+        },
+        "double-quoted-strings": {
+            "name": "string.quoted.double.mac",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.mac",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "numbers": {
+            "name": "constant.numeric.mac",
+            "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+        },
+        "built_in_variables": {
+            "name": "support.variable.mac",
+            "match": "\\b(simp|smp)\\b"
+        },
+        "constants": {
+            "name": "constant.language.mac",
+            "match": "\\b(%pi|%e|%inf|%i|%phi)\\b"
+        },
+        "variables": {
+            "name": "variable.mac",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b"
+        }
+    },
+    "scopeName": "source.mac"
 }
