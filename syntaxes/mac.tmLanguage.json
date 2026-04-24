@@ -36,7 +36,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.mac",
-				"match": "\\b(if|then|else|while|do|for|to|return|lambda|block|quote|load)\\b"
+				"match": "\\b(if|then|else|elseif|while|do|for|to|return|lambda|block|quote|load|unless|From|Thru|Step|Next|in)\\b"
 			}]
 		},
 		"operators": {
