@@ -42,12 +42,12 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.mac",
-                "match": "\\b(if|then|else|elseif|while|do|for|to|return|block|quote|load|unless|From|Thru|Step|Next|in)\\b"
+                "match": "\\b(if|then|else|elseif|while|do|for|to|return|block|quote|load|unless|from|From|thru|Thru|step|Step|next|Next|in|go|catch|throw)\\b"
             }]
         },
         "built_in_functions": {
             "name": "support.function.mac",
-            "match": "\\b(plist|listp|lambda)\\b(?=\\s*\\()"
+            "match": "\\b(plist|listp|lambda|local|garbage_collect|errcatch|error|warning|sstatus|status)\\b(?=\\s*\\()"
         },
         "operators": {
             "name": "keyword.operator.mac",
@@ -79,7 +79,7 @@
         },
         "built_in_variables": {
             "name": "support.variable.mac",
-            "match": "\\b(simp|smp)\\b"
+            "match": "\\b(simp|smp|errormsg|prederror)\\b"
         },
         "constants": {
             "name": "constant.language.mac",
