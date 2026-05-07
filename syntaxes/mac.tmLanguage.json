@@ -12,82 +12,84 @@
             "include": "#built_in_functions"
         },
         {
-            "include": "#operators"
-        },
-        {
-            "include": "#functions"
-        },
-        {
-            "include": "#double-quoted-strings"
-        },
-        {
-            "include": "#numbers"
+            "include": "#user_created_functions"
         },
         {
             "include": "#built_in_variables"
         },
         {
-            "include": "#constants"
+            "include": "#built_in_constants"
         },
         {
-            "include": "#variables"
+            "include": "#user_created_variables"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#double_quoted_strings"
+        },
+        {
+            "include": "#numbers"
         }
     ],
     "repository": {
-        "comments": {
-            "name": "comment.block.mac",
-            "begin": "/\\*",
-            "end": "\\*/"
-        },
-        "keywords": {
-            "patterns": [{
-                "name": "keyword.control.mac",
-                "match": "\\b(if|then|else|elseif|while|do|for|to|return|block|quote|load|unless|from|From|thru|Thru|step|Step|next|Next|in|go|catch|throw)\\b"
-            }]
+        "built_in_constants": {
+            "match": "(?\u003c![a-zA-Z0-9_])(%inf|%phi|%pi|%e|%i)\\b",
+            "name": "support.constant.mac"
         },
         "built_in_functions": {
-            "name": "support.function.mac",
-            "match": "\\b(plist|listp|lambda|local|garbage_collect|errcatch|error|warning|sstatus|status)\\b(?=\\s*\\()"
+            "match": "\\b(num_distinct_partitions|num_distinct_partitions|random_permutation|file_search_maxima|pathname_directory|file_output_append|integer_partitions|integer_partitions|cartesian_product|file_search_tests|file_search_usage|multinomial_coeff|multinomial_coeff|double_factorial|file_type_maxima|file_search_lisp|file_search_demo|define_variable|reset_verbosely|sublist_indices|linsolve_params|reset_verbosely|extremal_subset|extremal_subset|ordermagnitudep|symmdifference|set_partitions|num_partitions|filename_merge|nonnegintegerp|file_type_lisp|set_partitions|num_partitions|pathname_type|setdifference|run_testsuite|load_pathname|equiv_classes|pathname_name|partition_set|permutations|full_listify|minfactorial|intersection|remfunction|file_search|file_search|remfunction|substinpart|rationalize|cardinality|ordergreatp|killcontext|with_stdout|with_stdout|tree_reduce|tree_reduce|create_list|trigreduce|orderlessp|trigexpand|supcontext|bfallroots|fullsetify|trigreduce|printprops|printprops|printprops|deactivate|appendfile|askinteger|supcontext|askinteger|polyfactor|properties|askinteger|nonscalarp|kron_delta|bfallroots|ordergreat|build_info|listofvars|askinteger|make_array|bug_report|arrayapply|newcontext|constantp|arraymake|disjointp|arrayinfo|stringout|dimension|stringout|dimension|dispterms|stringout|stringout|stringout|operatorp|listarray|operatorp|defstruct|defstruct|orderless|substpart|intersect|partition|stirling2|ieqnprint|funcsolve|stirling1|setequalp|batchload|pickapart|factorial|fillarray|polarform|conjugate|file_type|printfile|closefile|realroots|realroots|realroots|realroots|writefile|zeroequiv|remarray|ldisplay|featurep|activate|trigsimp|allroots|allroots|remarray|rectform|float2bf|binomial|realpart|realonly|readonly|propvars|collapse|collapse|fullmapl|factcomb|powerset|powerset|playback|playback|playback|playback|playback|identity|playback|playback|imagpart|playback|integerp|copylist|outermap|optimize|describe|describe|describe|disolate|numerval|notequal|dispform|dispform|divisors|makelist|makelist|loadfile|elementp|linsolve|scanmap|disjoin|xreduce|xreduce|verbify|unorder|unknown|trigrat|lfreeof|to_lisp|endcons|symbolp|subvarp|listify|apropos|subsetp|sublist|asksign|seventh|sconcat|scanmap|scalarp|lreduce|lreduce|rreduce|rreduce|makeset|reverse|flatten|mapatom|maplist|rearray|bfloatp|ratnump|ceiling|display|moebius|dispfun|dispfun|charfun|fullmap|compare|example|example|funmake|genfact|nounify|declare|isolate|nthroot|numberp|forget|psubst|lambda|nterms|lambda|second|setify|assume|labels|unique|delete|delete|define|define|define|signum|reveal|define|define|nroots|remove|adjoin|algsys|remove|inpart|remove|length|remove|algsys|remove|bfloat|fundef|rembox|concat|rembox|emptyp|rembox|string|append|lambda|freeof|entier|subvar|freeof|psubst|forget|eighth|fourth|member|subset|sublis|alias|solve|array|subst|lpart|apply|array|array|floor|maybe|print|float|assoc|solve|belln|ninth|tenth|third|listp|first|reset|grind|every|every|facts|array|batch|batch|solve|sixth|union|evenp|assoc|round|equal|ldisp|atan2|facts|fifth|dpart|asin|cabs|save|save|save|save|kill|acos|save|atom|atan|kill|setp|kill|kill|load|sign|kill|acot|rest|rest|acsc|oddp|some|some|sort|sort|last|lmin|demo|join|asec|part|ieqn|read|save|lmax|carg|quit|qput|kill|args|push|disp|cons|kill|kill|csc|min|tan|pop|new|lhs|cot|put|get|box|fix|cos|sec|box|rhs|max|new|rem|abs|map|sin|is|ev|op)\\b(?=\\s*\\()",
+            "name": "support.function.mac"
         },
-        "operators": {
-            "name": "keyword.operator.mac",
-            "match": "(?:\\+|-|\\*|/|\\^|%|:|:=|=|#|<|>|<=|>=|/=)|\\b(and|or|not)\\b"
+        "built_in_variables": {
+            "match": "\\b(display_format_internal|output_format_for_help|sublis_apply_lambda|isolate_wrt_times|factorial_expand|testsuite_files|solvedecomposes|trigexpandtimes|assume_pos_pred|use_fast_arrays|trigexpandplus|multiplicities|negsumdispflag|activecontexts|solvetrigwarn|solvenullwarn|solveexplicit|numer_pbranch|listdummyvars|integervalued|listconstvars|rootsepsilon|sumsplitfact|triginverses|linsolvewarn|assumescalar|sqrtdispflag|solvefactors|exptdispflag|programmode|optimprefix|exptisolate|solveradcan|fpprintprec|globalsolve|manual_demo|structures|halfangles|noninteger|%edispflag|decreasing|%rnum_list|absboxchar|algepsilon|subnumsimp|alphabetic|irrational|ratepsilon|assume_pos|partswitch|stringdisp|increasing|infolists|m1pbranch|myoptions|powerdisp|imaginary|pfeformat|functions|nonscalar|backsubst|display2d|optionset|floatnump|prederror|loadprint|exptsubst|listarith|rational|bindtest|noundisp|features|lispdisp|leftjust|stardisp|contexts|algexact|linechar|constant|trigsign|maperror|mapprint|url_base|nonarray|showtime|dispflag|nolabels|linenum|factlim|mainvar|%piargs|aliases|bftorat|bftrunc|boxchar|breakup|browser|opsubst|complex|integer|outchar|context|infeval|feature|labels|posfun|values|%iargs|ttyoff|fpprec|prompt|allbut|arrays|inchar|inflag|noeval|scalar|evflag|numer|evfun|piece|grind|ibase|nouns|obase|props|%rnum|float|linel|even|pred|eval|real|noun|odd|%th|__|%%|%|_)\\b",
+            "name": "support.variable.mac"
         },
-        "functions": {
-            "name": "entity.name.function.mac",
-            "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b(?=\\s*\\()",
-            "captures": {
-                "0": {
-                    "name": "entity.name.function.mac"
-                }
-            }
+        "comments": {
+            "begin": "/\\*",
+            "end": "\\*/",
+            "name": "comment.block.mac"
         },
-        "double-quoted-strings": {
-            "name": "string.quoted.double.mac",
+        "double_quoted_strings": {
             "begin": "\"",
             "end": "\"",
+            "name": "string.quoted.double.mac",
             "patterns": [
                 {
-                    "name": "constant.character.escape.mac",
-                    "match": "\\\\."
+                    "match": "\\\\.",
+                    "name": "constant.character.escape.mac"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "\\b(if|then|else|elseif|while|do|for|to|return|block|quote|load|unless|from|From|thru|Thru|step|Step|next|Next|in|go|catch|throw)\\b",
+                    "name": "keyword.control.mac"
                 }
             ]
         },
         "numbers": {
-            "name": "constant.numeric.mac",
-            "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+            "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b",
+            "name": "constant.numeric.mac"
         },
-        "built_in_variables": {
-            "name": "support.variable.mac",
-            "match": "\\b(simp|smp|errormsg|prederror)\\b"
+        "operators": {
+            "match": "(?:\\+|-|\\*|/|\\^|%|:|:=|=|#|\u003c|\u003e|\u003c=|\u003e=|/=)|\\b(and|or|not)\\b",
+            "name": "keyword.operator.mac"
         },
-        "constants": {
-            "name": "constant.language.mac",
-            "match": "\\b(%pi|%e|%inf|%i|%phi)\\b"
+        "user_created_functions": {
+            "captures": {
+                "0": {
+                    "name": "entity.name.function.mac"
+                }
+            },
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b(?=\\s*\\()",
+            "name": "entity.name.function.mac"
         },
-        "variables": {
-            "name": "variable.mac",
-            "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b"
+        "user_created_variables": {
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_']*\\b",
+            "name": "variable.other.mac"
         }
     },
     "scopeName": "source.mac"
