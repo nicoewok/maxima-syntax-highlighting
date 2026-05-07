@@ -31,6 +31,8 @@ func getPatternFromFile(filename string) string {
 		return len(validItems[i]) > len(validItems[j])
 	})
 
+	fmt.Printf("Total %s: %d patterns\n", strings.Split(filename, ".")[0], len(validItems))
+
 	return strings.Join(validItems, "|")
 }
 
