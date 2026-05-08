@@ -49,30 +49,25 @@ func main() {
 		"scopeName": "source.mac",
 		"patterns": []map[string]string{
 			{"include": "#comments"},
-			{"include": "#keywords"},
 			{"include": "#built_in_functions"},
-			{"include": "#user_created_functions"},
 			{"include": "#built_in_variables"},
 			{"include": "#built_in_constants"},
-			{"include": "#user_created_variables"},
+			{"include": "#keywords"},
 			{"include": "#operators"},
 			{"include": "#double_quoted_strings"},
 			{"include": "#numbers"},
+			{"include": "#user_created_functions"},
+			{"include": "#user_created_variables"},
 		},
 		"repository": map[string]any{
-			// FIXED: Restored exact comment matching
 			"comments": map[string]string{
 				"name":  "comment.block.mac",
 				"begin": `/\*`,
 				"end":   `\*/`,
 			},
 			"keywords": map[string]any{
-				"patterns": []map[string]string{
-					{
-						"name":  "keyword.control.mac",
-						"match": `\b(if|then|else|elseif|while|do|for|to|return|block|quote|load|unless|from|From|thru|Thru|step|Step|next|Next|in|go|catch|throw)\b`,
-					},
-				},
+				"name":  "keyword.control.mac",
+				"match": `\b(if|then|else|elseif|while|do|for|to|return|block|quote|load|unless|from|From|thru|Thru|step|Step|next|Next|in|go|catch|throw)\b`,
 			},
 			"built_in_functions": map[string]string{
 				"name":  "support.function.mac",
