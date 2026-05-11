@@ -35,7 +35,7 @@
     ],
     "repository": {
         "built_in_constants": {
-            "match": "(?\u003c![a-zA-Z0-9_])(%inf|%phi|%pi|%e|%i)\\b",
+            "match": "(?\u003c![a-zA-Z0-9_])(false|%inf|%phi|true|%pi|%e|%i)\\b",
             "name": "support.constant.mac"
         },
         "built_in_functions": {

@@ -1,1 +1,1 @@
-%pi|%e|%inf|%i|%phi
+%pi|%e|%inf|%i|%phi|true|false

@@ -92,12 +92,10 @@ func main() {
 				"name":  "variable.other.mac",
 				"match": `\b[a-zA-Z_][a-zA-Z0-9_']*\b`,
 			},
-			// FIXED: Restored exact operators
 			"operators": map[string]string{
 				"name":  "keyword.operator.mac",
 				"match": `(?:\+|-|\*|/|\^|%|:|:=|=|#|<|>|<=|>=|/=)|\b(and|or|not)\b`,
 			},
-			// FIXED: Restored exact double quoted strings and escape characters
 			"double_quoted_strings": map[string]any{
 				"name":  "string.quoted.double.mac",
 				"begin": `"`,
@@ -106,7 +104,6 @@ func main() {
 					{"name": "constant.character.escape.mac", "match": `\\.`},
 				},
 			},
-			// FIXED: Restored exact numbers matching
 			"numbers": map[string]string{
 				"name":  "constant.numeric.mac",
 				"match": `\b\d+(\.\d+)?([eE][+-]?\d+)?\b`,
