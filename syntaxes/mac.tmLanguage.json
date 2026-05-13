@@ -83,9 +83,16 @@
             },
             "patterns": [
                 {
-                    "comment": "Highlights the 10 evaluation switches as constants when inside ev()",
-                    "match": "\\b(simp|noeval|nouns|expand|detout|diff|float|numer|pred|eval)\\b",
-                    "name": "support.constant.mac"
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.separator.mac"
+                        },
+                        "2": {
+                            "name": "support.constant.mac"
+                        }
+                    },
+                    "comment": "Highlights switches after the 1st argument (ensured by matching a preceding comma)",
+                    "match": "(,)\\s*\\b(simp|noeval|nouns|expand|detout|diff|float|numer|pred|eval|risch)\\b"
                 },
                 {
                     "include": "$self"

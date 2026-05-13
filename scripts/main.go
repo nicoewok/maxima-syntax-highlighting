@@ -76,11 +76,16 @@ func main() {
 				"endCaptures": map[string]any{
 					"0": map[string]string{"name": "punctuation.section.group.end.mac"},
 				},
-				"patterns": []map[string]string{
+				"patterns": []map[string]any{
 					{
-						"comment": "Highlights the 10 evaluation switches as constants when inside ev()",
-						"name":    "support.constant.mac",
-						"match":   `\b(simp|noeval|nouns|expand|detout|diff|float|numer|pred|eval)\b`,
+						"comment": "Highlights switches after the 1st argument (ensured by matching a preceding comma)",
+						"match":   `(,)\s*\b(simp|noeval|nouns|expand|detout|diff|float|numer|pred|eval|risch)\b`,
+						"captures": map[string]any{
+							// Capture 1 is the comma, ensuring it doesn't lose standard formatting
+							"1": map[string]string{"name": "punctuation.separator.mac"},
+							// Capture 2 is the actual switch, colored as a constant
+							"2": map[string]string{"name": "support.constant.mac"},
+						},
 					},
 					{
 						"include": "$self",
