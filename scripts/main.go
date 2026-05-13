@@ -42,13 +42,14 @@ func main() {
 	variablesStr := getPatternFromFile("variables.txt")
 	constantsStr := getPatternFromFile("constants.txt")
 
-	// Build the JSON structure (copy of old tmLanguage.json)
+	// Build the JSON structure
 	tmLanguage := map[string]any{
 		"$schema":   "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 		"name":      "Maxima",
 		"scopeName": "source.mac",
 		"patterns": []map[string]string{
 			{"include": "#comments"},
+			{"include": "#ev_function"},
 			{"include": "#built_in_functions"},
 			{"include": "#built_in_variables"},
 			{"include": "#built_in_constants"},
@@ -64,6 +65,27 @@ func main() {
 				"name":  "comment.block.mac",
 				"begin": `/\*`,
 				"end":   `\*/`,
+			},
+			"ev_function": map[string]any{
+				"begin": `\b(ev)\s*(\()`,
+				"beginCaptures": map[string]any{
+					"1": map[string]string{"name": "support.function.mac"},
+					"2": map[string]string{"name": "punctuation.section.group.begin.mac"},
+				},
+				"end": `\)`,
+				"endCaptures": map[string]any{
+					"0": map[string]string{"name": "punctuation.section.group.end.mac"},
+				},
+				"patterns": []map[string]string{
+					{
+						"comment": "Highlights the 10 evaluation switches as constants when inside ev()",
+						"name":    "support.constant.mac",
+						"match":   `\b(simp|noeval|nouns|expand|detout|diff|float|numer|pred|eval)\b`,
+					},
+					{
+						"include": "$self",
+					},
+				},
 			},
 			"keywords": map[string]any{
 				"name":  "keyword.control.mac",

@@ -6,6 +6,9 @@
             "include": "#comments"
         },
         {
+            "include": "#ev_function"
+        },
+        {
             "include": "#built_in_functions"
         },
         {
@@ -59,6 +62,33 @@
                 {
                     "match": "\\\\.",
                     "name": "constant.character.escape.mac"
+                }
+            ]
+        },
+        "ev_function": {
+            "begin": "\\b(ev)\\s*(\\()",
+            "beginCaptures": {
+                "1": {
+                    "name": "support.function.mac"
+                },
+                "2": {
+                    "name": "punctuation.section.group.begin.mac"
+                }
+            },
+            "end": "\\)",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.section.group.end.mac"
+                }
+            },
+            "patterns": [
+                {
+                    "comment": "Highlights the 10 evaluation switches as constants when inside ev()",
+                    "match": "\\b(simp|noeval|nouns|expand|detout|diff|float|numer|pred|eval)\\b",
+                    "name": "support.constant.mac"
+                },
+                {
+                    "include": "$self"
                 }
             ]
         },
