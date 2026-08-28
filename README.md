@@ -14,6 +14,13 @@ Every contribution is very welcome to help improve recognising everything Maxima
 ![Screenshot to showcase capabilities](./images/Screenshot.png)
 Used theme: Atom One Dark Theme
 
+## Changelog
+
+### 1.1.0
+
+Giant update including lots of new predefined functions, variables and eval statement functions!
+Shoutout to [Mat-Ge](https://github.com/Mat-Ge) for providing me with a list of all Maxima-defined functions!
+
 ### 1.0.0
 
 Initial release of the Extension.
