@@ -1,6 +1,7 @@
 # Maxima Syntax Highlighting (Updated)
 
 > Note: the extension [Maxima Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=NicoLang1604.maxima-syntax-highlighting) is **outdated**! This is the newer version!
+> I am the rightful owner of both the NicoLang1604 publisher account and LangNico, both under the email address nicolang0416@gmail.com
 
 You finally have language support for Maxima (.mac)! With this extension, your Maxima code becomes more visually appealing and readable, with different elements such as keywords, operators, functions, strings, numbers, variables, and comments highlighted in distinct colors. Additionally comes with an icon for
 .mac files.
